@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Number Guessing Game</title>
+  </head>
+  <body>
+    <h1>Number Guessing Game</h1>
+    <p>
+      Guess a number from 1 to 10:
+    </p>
+    <input type="text" id="guess">
+    <button type="button" onclick="checkGuess()">
+      Check Guess
+    </button>
+    <p id="result"></p>
+    <script>
+      function checkGuess() {
+        // Get the user's guess
+        var guess = document.getElementById('guess').value;
+        // Generate a random number
+        var number = Math.floor(Math.random() * 10) + 1;
+        // Check if the user's guess is correct
+        if (guess == number) {
+          document.getElementById('result').innerHTML = 'You are right!';
+        } else {
+          document.getElementById('result').innerHTML = 'Sorry, you are wrong. The number was ' + number;
+        }
+      }
+      
+    </script>
+  </body>
+
+  <footer>
+    <h1>Made By Lord</h1>
+  </footer>
+</html>
